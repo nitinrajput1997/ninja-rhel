@@ -1,21 +1,12 @@
 # ninja-rhel
+```
+wget https://github.com/ninja-build/ninja/archive/refs/tags/v1.11.1.tar.gz
 
-Ninja package is not available in the default repositories of RHEL 8.7.
+tar -xzf v1.11.1.tar.gz
 
-You can try an alternative method to install Ninja on your system by using the Python package manager, pip. Here's how you can do it:
+sudo dnf install python3
+sudo ln -s /usr/bin/python3 /usr/bin/python
 
-Make sure you have the python3-pip package installed. If not, you can install it using the following command:
+cd v1.11.1-ninja
+./configure.py --bootstrap
 ```
-sudo dnf install python3-pip
-```
-Once python3-pip is installed, you can use pip to install Ninja by running the following command:
-```
-pip3 install ninja
-```
-This command will install Ninja and its dependencies using pip.
-
-Verify the installation by checking the Ninja version:
-```
-ninja --version
-```
-This should display the installed Ninja version if the installation was successful.
